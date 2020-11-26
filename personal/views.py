@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from personal.models import Question
 
 # Create your views here.
 
@@ -22,7 +21,9 @@ def home_screen_view(request):
 	# context = {}
 	# context['list_of_values'] = list_of_values
 
-	questions = Question.objects.all()
+	# questions = Question.objects.all()
+	# context = {}
+	# context['questions'] = questions
+
 	context = {}
-	context['questions'] = questions
 	return render(request, "personal/home.html", context)
