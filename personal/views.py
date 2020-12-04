@@ -26,8 +26,8 @@ def home_screen_view(request):
 	# context = {}
 	# context['questions'] = questions
 
-	accounts = Account.objects.all()
 	context = {}
+	accounts = Account.objects.all()
 	context['accounts'] = accounts
 
 	return render(request, "personal/home.html", context)
